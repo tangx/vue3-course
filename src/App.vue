@@ -1,4 +1,5 @@
 <template>
+  <hook />
   <watch-effect></watch-effect>
   <watch />
   <computed />
@@ -9,6 +10,7 @@
 </template>
 
 <script lang="ts">
+import Hook from "./components/12_hook/Hook.vue";
 import WatchEffect from "./components/10_watchEffect/WatchEffect.vue";
 import Watch from "./components/08_watch/Watch.vue";
 import Computed from "./components/07_computed/Computed.vue";
@@ -20,6 +22,7 @@ import RefFunction from "./components/02_RefFunction/RefFunction.vue";
 export default {
   name: "App",
   components: {
+    Hook,
     WatchEffect,
     Watch,
     Computed,
