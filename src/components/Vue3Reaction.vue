@@ -1,5 +1,5 @@
 <template>
-  <n-card title="05. Vue3 的响应行为">
+  <n-card title="04. Vue3 的响应行为">
     <n-tag type="warning">
       注意: `lang="ts"` 的时候， 是不能增删对象属性的。 因为 typescript
       是强类型语言。 使用了 `window.Proxy`

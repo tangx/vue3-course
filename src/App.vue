@@ -1,8 +1,8 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
-  <ref-function />
+  <vue-3-reaction />
   <reactive-function />
-  <Vue3Reaction />
+  <ref-function />
 </template>
 
 <script lang="ts">
