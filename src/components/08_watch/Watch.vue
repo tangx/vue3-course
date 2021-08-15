@@ -1,5 +1,5 @@
 <template>
-  <n-card title="07. 计算属性">
+  <n-card title="07. 计算属性" size="huge">
     <div>
       Watch 接受三个参数 watch
       <p>1. watch(监视的对象, [新值，旧值], {参数})</p>
