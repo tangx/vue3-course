@@ -17,7 +17,7 @@
 <script lang="js">
 import { reactive } from "vue";
 export default {
-  name: "App",
+  name: "Vue3Reaction",
   components: {},
 
   setup() {

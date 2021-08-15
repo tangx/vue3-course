@@ -12,7 +12,7 @@
 <script lang="ts">
 import { ref } from "vue";
 export default {
-  name: "App",
+  name: "RefFunction",
   components: {},
 
   setup() {

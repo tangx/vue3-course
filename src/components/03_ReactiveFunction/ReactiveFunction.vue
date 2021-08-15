@@ -11,7 +11,7 @@
 <script lang="ts">
 import { reactive } from "vue";
 export default {
-  name: "App",
+  name: "ReactiveFunction",
   components: {},
 
   setup() {
