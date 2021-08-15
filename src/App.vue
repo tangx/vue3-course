@@ -1,4 +1,5 @@
 <template>
+  <watch-effect></watch-effect>
   <watch />
   <computed />
   <setup-tips />
@@ -8,6 +9,7 @@
 </template>
 
 <script lang="ts">
+import WatchEffect from "./components/10_watchEffect/WatchEffect.vue";
 import Watch from "./components/08_watch/Watch.vue";
 import Computed from "./components/07_computed/Computed.vue";
 import SetupTips from "./components/06_SetupTips/SetupTips.vue";
@@ -18,6 +20,7 @@ import RefFunction from "./components/02_RefFunction/RefFunction.vue";
 export default {
   name: "App",
   components: {
+    WatchEffect,
     Watch,
     Computed,
     SetupTips,
