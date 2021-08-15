@@ -35,6 +35,7 @@ export default {
       // 在 return 中返回 fullnameReadonly
       //   必须在 return 中返回， fullnameReadonly 才会被执行
       person.fullname01 = person.firstName + " " + person.lastName;
+      return person.fullname01;
     });
 
     // 虽然成功赋值了， 但是不能显示动态计算
