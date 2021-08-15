@@ -30,13 +30,17 @@ export default {
 
     // //  计算属性简单写法， 只有 get。 readonly
     let fullnameReadonly = computed(() => {
-      return person.firstName + " " + person.lastName;
+      // 定义计算属性 fullnameReadonly
+      // 并在函数内部修改 person.fullname01 的值
+      // 在 return 中返回 fullnameReadonly
+      //   必须在 return 中返回， fullnameReadonly 才会被执行
+      person.fullname01 = person.firstName + " " + person.lastName;
     });
 
-    // 虽然成功赋值了， 但是不能计算计算
-    person.fullname01 = computed(() => {
-      return person.firstName + " " + person.lastName;
-    }).value;
+    // 虽然成功赋值了， 但是不能显示动态计算
+    // person.fullname01 = computed(() => {
+    //   return person.firstName + " " + person.lastName;
+    // }).value;
 
     // //  计算属性完整写法， get / set
     let fullnameChangeable = computed({
