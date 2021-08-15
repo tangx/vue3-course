@@ -1,21 +1,20 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
   <vue-3-reaction />
   <reactive-function />
   <ref-function />
 </template>
 
 <script lang="ts">
-import RefFunction from "./components/RefFunction.vue";
-import ReactiveFunction from "./components/ReactiveFunction.vue";
-import Vue3Reaction from "./components/Vue3Reaction.vue";
+import Vue3Reaction from "./components/04_Vue3Reaction/Vue3Reaction.vue";
+import ReactiveFunction from "./components/03_ReactiveFunction/ReactiveFunction.vue";
+import RefFunction from "./components/02_RefFunction/RefFunction.vue";
 
 export default {
   name: "App",
   components: {
-    RefFunction,
-    ReactiveFunction,
     Vue3Reaction,
+    ReactiveFunction,
+    RefFunction,
   },
 };
 </script>
