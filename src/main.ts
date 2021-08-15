@@ -6,12 +6,17 @@ import {
     // create naive ui
     create,
     NCard,
-    NButton
+    NButton,
+    NTag,
 } from 'naive-ui'
 
 
 const naive = create({
-    components: [NButton, NCard]
+    components: [
+        NButton,
+        NCard,
+        NTag,
+    ]
 })
 
 

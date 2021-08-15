@@ -2,18 +2,20 @@
   <img alt="Vue logo" src="./assets/logo.png" />
   <ref-function />
   <reactive-function />
+  <Vue3Reaction />
 </template>
 
 <script lang="ts">
-// import { defineComponent } from 'vue'
 import RefFunction from "./components/RefFunction.vue";
 import ReactiveFunction from "./components/ReactiveFunction.vue";
+import Vue3Reaction from "./components/Vue3Reaction.vue";
 
 export default {
   name: "App",
   components: {
     RefFunction,
     ReactiveFunction,
+    Vue3Reaction,
   },
 };
 </script>
