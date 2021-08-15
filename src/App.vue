@@ -1,16 +1,19 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png" />
   <ref-function />
+  <reactive-function />
 </template>
 
 <script lang="ts">
 // import { defineComponent } from 'vue'
 import RefFunction from "./components/RefFunction.vue";
+import ReactiveFunction from "./components/ReactiveFunction.vue";
 
 export default {
   name: "App",
   components: {
     RefFunction,
+    ReactiveFunction,
   },
 };
 </script>
