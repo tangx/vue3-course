@@ -37,7 +37,7 @@ export default {
   // 在 子组件中定义 需要接收的「事件名称」
   emits: ["hello"],
 
-  setup(props, ctx) {
+  setup(props: any, ctx: any) {
     console.log("props::::", props);
     console.log("context");
     console.log("  ctx.attrs:::", ctx.attrs);
