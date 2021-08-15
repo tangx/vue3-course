@@ -31,7 +31,7 @@
 <script lang="ts">
 import { ref, reactive, watchEffect } from "vue";
 export default {
-  name: "Watch",
+  name: "WatchEffect",
   components: {},
 
   setup() {
