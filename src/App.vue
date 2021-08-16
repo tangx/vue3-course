@@ -1,4 +1,5 @@
 <template>
+  <vue-3-typescript></vue-3-typescript>
   <to-ref />
   <hook />
   <watch-effect></watch-effect>
@@ -11,6 +12,7 @@
 </template>
 
 <script lang="ts">
+import Vue3Typescript from "./components/14_vue3_ts/Vue3Typescript.vue"
 import ToRef from "./components/13_toRef/ToRef.vue";
 import Hook from "./components/12_hook/Hook.vue";
 import WatchEffect from "./components/10_watchEffect/WatchEffect.vue";
@@ -24,6 +26,7 @@ import RefFunction from "./components/02_RefFunction/RefFunction.vue";
 export default {
   name: "App",
   components: {
+    Vue3Typescript,
     ToRef,
     Hook,
     WatchEffect,

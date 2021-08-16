@@ -17,7 +17,7 @@ export default {
   },
 
   setup() {
-    let isOn = ref(true);
+    let isOn = ref(false);
     // 返回
     return {
       isOn,
