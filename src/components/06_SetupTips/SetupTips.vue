@@ -1,18 +1,26 @@
 <template>
   <n-card title="06. setup() 注意事项">
     <n-button type="primary" @click="giveup">放弃前端</n-button>
-    <div>
-      {{ news }}
-    </div>
+    <div>{{ news }}</div>
     <!-- @hello 给组件绑定 事件 -->
     <!-- msg, school 给组件绑定 props -->
     <children @hello="showReciveMessage" :msg="news.msg" :school="news.school">
-      <span>默认 slots, 名字为 default</span>
+      <!-- 默认插槽 -->
+      <div>
+        <span>默认插槽, 名字为 default</span>
+        <br />
+        <img src="https://tangx.in/assets/images/qrcode-mp-weixin.jpg" />
+      </div>
+      <!-- 所有命名插槽都必须在 组件中定义 否则会 ts 会报错 -->
       <template v-slot:slot1>
-        <span> 命名 slot， 名字为 slot1 </span>
+        <div>
+          <span>命名插槽， 名字为 slot1</span>
+        </div>
       </template>
       <template v-slot:slot2>
-        <span> 命名 slot， 名字为 slot2 </span>
+        <div>
+          <span>命名插槽， 名字为 slot2</span>
+        </div>
       </template>
     </children>
     <div>SetupTips: 等待 Hello 事件 => {{ emitEvent.emitMsg }}</div>

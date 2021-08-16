@@ -1,5 +1,9 @@
 <template>
   <n-card size="huge" title="setuptips children">
+    <slot></slot>
+    <slot name="slot1"></slot>
+    <slot name="slot2"></slot>
+
     <n-card size="medium" title="props">
       <p>为什么 props 变了， 但是 news 没变呢？</p>
       <!-- <p>props: {{ props }}</p>  不能直接在 template 中使用-->
@@ -10,19 +14,13 @@
     <n-card size="medium" title="context emits">
       <p>emit 事件</p>
       <!--  使用 context.emit 传递事件 -->
-      <button @click="callEventHello">
-        Children: 使用 context.emit 调用 hello 事件
-      </button>
+      <button @click="callEventHello">Children: 使用 context.emit 调用 hello 事件</button>
     </n-card>
 
     <n-card size="medium" title="context slots">
-      <a href="https://www.bilibili.com/video/BV1Zy4y1K7SH?p=102"
-        >default slot
-      </a>
+      <a href="https://www.bilibili.com/video/BV1Zy4y1K7SH?p=102">default slot</a>
       <br />
-      <a href="https://www.bilibili.com/video/BV1Zy4y1K7SH?p=103">
-        named slots
-      </a>
+      <a href="https://www.bilibili.com/video/BV1Zy4y1K7SH?p=103">named slots</a>
     </n-card>
   </n-card>
 </template>
