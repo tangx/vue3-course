@@ -19,5 +19,6 @@ const naive = create({
     ]
 })
 
+import router from './router'
 
-createApp(App).use(naive).mount('#app')
+createApp(App).use(naive).use(router).mount('#app')
