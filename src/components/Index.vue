@@ -1,48 +1,46 @@
 <template>
-  <!-- template here -->
-  <!-- <div>
-    <router-link to="/index/ref-function">RefFunction</router-link>
-    <router-link to="/index/reactive-function">ReactiveFunction</router-link>
-  </div>-->
+  <h1>this is index</h1>
 
-  <div>
-    <!-- 最上层导航 -->
-    <ul class="list-group">
-      <router-link
-        class="list-group-item"
-        data-bs-toggle="collapse"
-        active-class="active"
-        v-for=" (route,index) in routes"
-        :key="index"
-        :to="route.to"
-      >{{ route.content }}</router-link>
-    </ul>
-  </div>
+  <router-link
+    class="list-group-item"
+    active-class="active"
+    v-for=" (route,index) in routes"
+    :key="index"
+    :to="route.to"
+    :class="route.classes"
+  >
+    <div>{{ route.content }}</div>
+  </router-link>
   <div>
     <router-view></router-view>
   </div>
-</template>
-
-<script lang='ts'>
-import { defineComponent, reactive } from 'vue'
+</template> 
 
 
-export default defineComponent({
+
+
+<script lang="ts">
+import { reactive } from 'vue'
+
+export default {
+  name: "App",
 
   setup() {
     const routes = reactive([
       {
         to: "/index/ref-function",
-        content: "RefFunction"
+        content: "RefFunction",
+        classes: [],
       },
       {
         to: "/index/reactive-function",
         content: "ReactiveFunction"
-      }
+      },
     ])
+
     return {
-      routes
+      routes,
     }
   }
-});
+};
 </script>

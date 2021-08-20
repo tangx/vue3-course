@@ -1,10 +1,16 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
+import Home from '../components/Home.vue'
 import Index from '../components/Index.vue'
 import About from '../components/About.vue'
+
 import RefFunction from '../components/02_RefFunction/RefFunction.vue'
 import ReactiveFunction from '../components/03_ReactiveFunction/ReactiveFunction.vue'
 
 const routes = [
+    {
+        path:'/',
+        component: Home
+    },
     {
         path: '/index',
         component: Index,
