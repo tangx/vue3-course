@@ -1,16 +1,6 @@
 <template>
-  <h1>this is index</h1>
+  <h1>Index</h1>
 
-  <router-link
-    class="list-group-item"
-    active-class="active"
-    v-for=" (route,index) in routes"
-    :key="index"
-    :to="route.to"
-    :class="route.classes"
-  >
-    <div>{{ route.content }}</div>
-  </router-link>
   <div>
     <router-view></router-view>
   </div>

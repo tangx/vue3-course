@@ -1,6 +1,6 @@
 <template>
   <!-- template here -->
-  <div>About Vue3 + Typescript</div>
+  <h1>About</h1>
   <div>
     <router-view></router-view>
   </div>

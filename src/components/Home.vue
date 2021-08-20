@@ -1,19 +1,34 @@
 <template>
   <div class="container">
     <div class="row">
-      <div class="col-3">
+      <div class="col-4">
         目录
         <div class="container">
-          <router-link
-            class="list-group-item"
-            active-class="active"
-            v-for=" (route,index) in top1Routes"
-            :key="index"
-            :to="route.to"
-            :class="route.classes"
-          >
-            <div>{{ route.content }}</div>
-          </router-link>
+          <div>
+            <router-link class="list-group-item" to="/index">
+              <div>INDEX</div>
+            </router-link>
+            <div class="row">
+              <div class="col-2"></div>
+              <div class="col">
+                <router-link
+                  class="list-group-item"
+                  active-class="active"
+                  to="/index/ref-function"
+                >RefFunction</router-link>
+                <router-link
+                  class="list-group-item"
+                  active-class="active"
+                  to="/index/reactive-function"
+                >ReactiveFunction</router-link>
+              </div>
+            </div>
+          </div>
+          <div>
+            <router-link class="list-group-item" to="/about">
+              <div>About</div>
+            </router-link>
+          </div>
         </div>
       </div>
       <div class="col">
@@ -33,7 +48,6 @@ import { getCurrentInstance } from 'vue'
 
 export default {
   name: "App",
-
 
   setup() {
     const top1Routes = reactive(
