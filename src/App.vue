@@ -1,23 +1,54 @@
 <template>
   <h1>Vue3+ Typescript + Vite2</h1>
 
-  <div id="routes">
-    <router-link active-class="active" to="/index">Index</router-link>
-    <router-link active-class="active" to="/about">About</router-link>
-  </div>
-  <div id="router-view">
-    <router-view></router-view>
+  <div>
+    <!-- 最上层导航 -->
+    <ul class="list-group">
+      <router-link
+        class="list-group-item"
+        data-bs-toggle="collapse"
+        active-class="active"
+        v-for=" (route,index) in indexRoutes"
+        :key="index"
+        :to="route.to"
+      >
+        <div>{{ route.content }}</div>
+      </router-link>
+      <div id="router-view">
+        <router-view></router-view>
+      </div>
+    </ul>
   </div>
 </template> 
 
 
 <script lang="ts">
+import { reactive } from 'vue'
 
 export default {
   name: "App",
-  components: {
 
-  },
+
+  setup() {
+    const indexRoutes = reactive(
+      [
+        {
+          to: "/index",
+          content: "Index",
+        },
+        {
+          to: "/about",
+          content: "About"
+        }
+      ]
+    )
+
+    return {
+      indexRoutes
+    }
+  }
+
+
 };
 </script>
 
